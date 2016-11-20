@@ -1,2 +1,13 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Rails ActionCable example</h1>
+
+<%= form_for(@message, url: {action: "message"}) do |f| %>
+    <%= f.label :message %><br />
+    <%= f.text_field :message %>
+    <%= f.submit %>
+<% end %>
+
+<ul id="messages">
+    <% @messages.each do |message| %>
+    <li><%= message.message %></li>
+    <% end %>
+</ul>
