@@ -128,7 +128,7 @@ end
 
 The updetes are received on the client-side in JavaScript. Rails provided an CoffeeScript file (`app/assets/javascripts/channels/message.coffee`) where we can specify the behavior in the `received` function
 
-````coffee
+```coffee
 App.message = App.cable.subscriptions.create "MessageChannel",
   connected: ->
     # Called when the subscription is ready for use on the server
